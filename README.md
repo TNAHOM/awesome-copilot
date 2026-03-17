@@ -1,159 +1,55 @@
 # 🤖 Awesome GitHub Copilot
 [![Powered by Awesome Copilot](https://img.shields.io/badge/Powered_by-Awesome_Copilot-blue?logo=githubcopilot)](https://aka.ms/awesome-github-copilot) [![GitHub contributors from allcontributors.org](https://img.shields.io/github/all-contributors/github/awesome-copilot?color=ee8449)](#contributors-)
 
+A community-created collection of custom agents, instructions, skills, hooks, workflows, and plugins to supercharge your GitHub Copilot experience.
 
-A community created collection of custom agents and instructions to supercharge your GitHub Copilot experience across different domains, languages, and use cases.
+> [!TIP]
+> **Explore the full collection on the website →** [awesome-copilot.github.com](https://awesome-copilot.github.com)
+>
+> The website offers full-text search and filtering across hundreds of resources, plus the [Tools](https://awesome-copilot.github.com/tools) section for MCP servers and developer tooling, and the [Learning Hub](https://awesome-copilot.github.com/learning-hub) for guides and tutorials.
+>
+> **Using this collection in an AI agent?** A machine-readable [`llms.txt`](https://awesome-copilot.github.com/llms.txt) is available with structured listings of all agents, instructions, and skills.
 
-## 🚀 What is Awesome GitHub Copilot?
+## 📖 Learning Hub
 
-This repository provides a comprehensive toolkit for enhancing GitHub Copilot with specialized:
+New to GitHub Copilot customization? The **[Learning Hub](https://awesome-copilot.github.com/learning-hub)** on the website offers curated articles, walkthroughs, and reference material — covering everything from core concepts like agents, skills, and instructions to hands-on guides for hooks, agentic workflows, MCP servers, and the Copilot coding agent.
 
-- **👉 [Awesome Agents](docs/README.agents.md)** - Specialized GitHub Copilot agents that integrate with MCP servers to provide enhanced capabilities for specific workflows and tools
-- **👉 [Awesome Instructions](docs/README.instructions.md)** - Comprehensive coding standards and best practices that apply to specific file patterns or entire projects
-- **👉 [Awesome Hooks](docs/README.hooks.md)** - Automated workflows triggered by specific events during development, testing, and deployment
-- **👉 [Awesome Agentic Workflows](docs/README.workflows.md)** - AI-powered repository automations that run coding agents in GitHub Actions with natural language instructions
-- **👉 [Awesome Skills](docs/README.skills.md)** - Self-contained folders with instructions and bundled resources that enhance AI capabilities for specialized tasks
-- **👉 [Awesome Plugins](docs/README.plugins.md)** - Curated plugins of related agents and skills organized around specific themes and workflows
-- **👉 [Awesome Cookbook Recipes](cookbook/README.md)** - Practical, copy-paste-ready code snippets and real-world examples for working with GitHub Copilot tools and features
+## What's in this repo
 
-## 🌟 Featured Plugins
+| Resource | Description | Browse |
+|----------|-------------|--------|
+| 🤖 [Agents](docs/README.agents.md) | Specialized Copilot agents that integrate with MCP servers | [All agents →](https://awesome-copilot.github.com/agents) |
+| 📋 [Instructions](docs/README.instructions.md) | Coding standards applied automatically by file pattern | [All instructions →](https://awesome-copilot.github.com/instructions) |
+| 🎯 [Skills](docs/README.skills.md) | Self-contained folders with instructions and bundled assets | [All skills →](https://awesome-copilot.github.com/skills) |
+| 🔌 [Plugins](docs/README.plugins.md) | Curated bundles of agents and skills for specific workflows | [All plugins →](https://awesome-copilot.github.com/plugins) |
+| 🪝 [Hooks](docs/README.hooks.md) | Automated actions triggered during Copilot agent sessions | [All hooks →](https://awesome-copilot.github.com/hooks) |
+| ⚡ [Agentic Workflows](docs/README.workflows.md) | AI-powered GitHub Actions automations written in markdown | [All workflows →](https://awesome-copilot.github.com/workflows) |
+| 🍳 [Cookbook](cookbook/README.md) | Copy-paste-ready recipes for working with Copilot APIs | — |
 
-Discover our curated plugins of agents and skills organized around specific themes and workflows.
+## 🛠️ Tools
 
-| Name | Description | Items | Tags |
-| ---- | ----------- | ----- | ---- |
-| [Awesome Copilot](plugins/awesome-copilot/README.md) | Meta skills that help you discover and generate curated GitHub Copilot agents, collections, instructions, and skills. | 5 items | github-copilot, discovery, meta, prompt-engineering, agents |
-| [Copilot SDK](plugins/copilot-sdk/README.md) | Build applications with the GitHub Copilot SDK across multiple programming languages. Includes comprehensive instructions for C#, Go, Node.js/TypeScript, and Python to help you create AI-powered applications. | 5 items | copilot-sdk, sdk, csharp, go, nodejs, typescript, python, ai, github-copilot |
-| [Partners](plugins/partners/README.md) | Custom agents that have been created by GitHub partners | 20 items | devops, security, database, cloud, infrastructure, observability, feature-flags, cicd, migration, performance |
+Looking at how to use Awesome Copilot? Check out the **[Tools section](https://awesome-copilot.github.com/tools)** of the website for MCP servers, editor integrations, and other developer tooling to get the most out of this collection.
 
+## Install a Plugin
 
-## How to Install Customizations
-
-To make it easy to add these customizations to your editor, we have created an [MCP Server](https://developer.microsoft.com/blog/announcing-awesome-copilot-mcp-server) that provides functionality for searching and installing instructions, agents, and skills directly from this repository. You'll need to have Docker installed and running to run the MCP server locally.
-
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/mcp/vscode) [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/mcp/vscode-insiders) [![Install in Visual Studio](https://img.shields.io/badge/Visual_Studio-Install-C16FDE?logo=visualstudio&logoColor=white)](https://aka.ms/awesome-copilot/mcp/vs)
-
-<details>
-<summary>Show MCP Server JSON configuration</summary>
-
-```json
-{
-  "servers": {
-    "awesome-copilot": {
-      "type": "stdio",
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot:latest"
-      ]
-    }
-  }
-}
-```
-
-</details>
-
-## 📄 llms.txt
-
-An [`llms.txt`](https://awesome-copilot.github.com/llms.txt) file following the [llmstxt.org](https://llmstxt.org/) specification is available on the GitHub Pages site. This machine-readable file makes it easy for Large Language Models to discover and understand all available agents, instructions, and skills, providing a structured overview of the repository's resources with names and descriptions.
-
-## 🔧 How to Use
-
-### 🔌 Plugins
-
-Plugins are installable packages that bundle related agents and skills, making it easy to install a curated set of resources.
-
-#### Installing Plugins
-
-First, add the Awesome Copilot marketplace to your Copilot CLI:
-
-```bash
-copilot plugin marketplace add github/awesome-copilot
-```
-
-Then install any plugin:
+For most users, the **Awesome Copilot** marketplace is already registered in the Copilot CLI/VS Code, so you can install a plugin directly:
 
 ```bash
 copilot plugin install <plugin-name>@awesome-copilot
 ```
 
-Alternatively, you can use the `/plugin` command within a Copilot chat session to browse and install plugins interactively.
+If you are using an older Copilot CLI version or a custom setup and see an error that the marketplace is unknown, register it once and then install:
 
-### 🤖 Custom Agents
-
-Custom agents can be used in Copilot coding agent (CCA), VS Code, and Copilot CLI (coming soon). For CCA, when assigning an issue to Copilot, select the custom agent from the provided list. In VS Code, you can activate the custom agent in the agents session, alongside built-in agents like Plan and Agent.
-
-### 🎯 Skills
-
-Skills are self-contained folders with instructions and bundled resources that enhance AI capabilities for specialized tasks. They can be accessed through the GitHub Copilot interface or installed via plugins.
-
-### 📋 Instructions
-
-Instructions automatically apply to files based on their patterns and provide contextual guidance for coding standards, frameworks, and best practices.
-
-### 🪝 Hooks
-
-Hooks enable automated workflows triggered by specific events during GitHub Copilot coding agent sessions (like sessionStart, sessionEnd, userPromptSubmitted). They can automate tasks like logging, auto-committing changes, or integrating with external services.
-
-### ⚡ Agentic Workflows
-
-[Agentic Workflows](https://github.github.com/gh-aw) are AI-powered repository automations that run coding agents in GitHub Actions. Defined in markdown with natural language instructions, they enable event-triggered and scheduled automation — from issue triage to daily reports.
-
-## 🎯 Why Use Awesome GitHub Copilot?
-
-- **Productivity**: Pre-built agents and instructions save time and provide consistent results.
-- **Best Practices**: Benefit from community-curated coding standards and patterns.
-- **Specialized Assistance**: Access expert-level guidance through specialized custom agents.
-- **Continuous Learning**: Stay updated with the latest patterns and practices across technologies.
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to:
-
-- Add new instructions, hooks, workflows, agents, or skills
-- Improve existing content
-- Report issues or suggest enhancements
-
-For AI coding agents working with this project, refer to [AGENTS.md](AGENTS.md) for detailed technical guidance on development workflows, setup commands, and contribution standards.
-
-### Quick Contribution Guide
-
-1. Follow our file naming conventions and frontmatter requirements
-2. Test your contributions thoroughly
-3. Update the appropriate README tables
-4. Submit a pull request with a clear description
-
-## 📖 Repository Structure
-
-```plaintext
-├── instructions/     # Coding standards and best practices (.instructions.md)
-├── agents/           # AI personas and specialized modes (.agent.md)
-├── hooks/            # Automated hooks for Copilot coding agent sessions
-├── workflows/        # Agentic Workflows for GitHub Actions automation
-├── plugins/          # Installable plugins bundling related items
-├── scripts/          # Utility scripts for maintenance
-└── skills/           # AI capabilities for specialized tasks
+```bash
+copilot plugin marketplace add github/awesome-copilot
+copilot plugin install <plugin-name>@awesome-copilot
 ```
 
-## 📄 License
+## Contributing
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) for AI agent guidance · [Security](SECURITY.md) · [Code of Conduct](CODE_OF_CONDUCT.md)
 
-## 🛡️ Security & Support
-
-- **Security Issues**: Please see our [Security Policy](SECURITY.md)
-- **Support**: Check our [Support Guide](SUPPORT.md) for getting help
-- **Code of Conduct**: We follow the [Contributor Covenant](CODE_OF_CONDUCT.md)
-
-## ℹ️ Disclaimer
-
-The customizations in this repository are sourced from and created by third-party developers. GitHub does not verify, endorse, or guarantee the functionality or security of these agents. Please carefully inspect any agent and its documentation before installing to understand permissions it may require and actions it may perform.
-
----
-
-**Ready to supercharge your coding experience?** Start exploring our [instructions](docs/README.instructions.md), [hooks](docs/README.hooks.md), [skills](docs/README.skills.md), [agentic workflows](docs/README.workflows.md), and [custom agents](docs/README.agents.md)!
+> The customizations here are sourced from third-party developers. Please inspect any agent and its documentation before installing.
 
 ## Contributors ✨
 
@@ -178,41 +74,41 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="http://digitarald.de/"><img src="https://avatars.githubusercontent.com/u/8599?v=4?s=100" width="100px;" alt="Harald Kirschner"/><br /><sub><b>Harald Kirschner</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=digitarald" title="Code">💻</a> <a href="https://github.com/github/awesome-copilot/commits?author=digitarald" title="Documentation">📖</a> <a href="#maintenance-digitarald" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mubaidr.js.org/"><img src="https://avatars.githubusercontent.com/u/2222702?v=4?s=100" width="100px;" alt="Muhammad Ubaid Raza"/><br /><sub><b>Muhammad Ubaid Raza</b></sub></a><br /><a href="#agents-mubaidr" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-mubaidr" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tmeschter"><img src="https://avatars.githubusercontent.com/u/10506730?v=4?s=100" width="100px;" alt="Tom Meschter"/><br /><sub><b>Tom Meschter</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=tmeschter" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.aungmyokyaw.com/"><img src="https://avatars.githubusercontent.com/u/9404824?v=4?s=100" width="100px;" alt="Aung Myo Kyaw"/><br /><sub><b>Aung Myo Kyaw</b></sub></a><br /><a href="#agents-AungMyoKyaw" title="Specialized agents for GitHub Copilot">🎭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.aungmyokyaw.com/"><img src="https://avatars.githubusercontent.com/u/9404824?v=4?s=100" width="100px;" alt="Aung Myo Kyaw"/><br /><sub><b>Aung Myo Kyaw</b></sub></a><br /><a href="#agents-AungMyoKyaw" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#prompts-AungMyoKyaw" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JasonYeMSFT"><img src="https://avatars.githubusercontent.com/u/39359541?v=4?s=100" width="100px;" alt="JasonYeMSFT"/><br /><sub><b>JasonYeMSFT</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=JasonYeMSFT" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/jrc356/"><img src="https://avatars.githubusercontent.com/u/37387479?v=4?s=100" width="100px;" alt="Jon Corbin"/><br /><sub><b>Jon Corbin</b></sub></a><br /><a href="#agents-Jrc356" title="Specialized agents for GitHub Copilot">🎭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/jrc356/"><img src="https://avatars.githubusercontent.com/u/37387479?v=4?s=100" width="100px;" alt="Jon Corbin"/><br /><sub><b>Jon Corbin</b></sub></a><br /><a href="#agents-Jrc356" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#prompts-Jrc356" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/troytaylor-msft"><img src="https://avatars.githubusercontent.com/u/248058374?v=4?s=100" width="100px;" alt="troytaylor-msft"/><br /><sub><b>troytaylor-msft</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=troytaylor-msft" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://delatorre.dev/"><img src="https://avatars.githubusercontent.com/u/38289677?v=4?s=100" width="100px;" alt="Emerson Delatorre"/><br /><sub><b>Emerson Delatorre</b></sub></a><br /><a href="#instructions-fazedordecodigo" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/burkeholland"><img src="https://avatars.githubusercontent.com/u/686963?v=4?s=100" width="100px;" alt="Burke Holland"/><br /><sub><b>Burke Holland</b></sub></a><br /><a href="#agents-burkeholland" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#infra-burkeholland" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#instructions-burkeholland" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://yaooqinn.github.io/"><img src="https://avatars.githubusercontent.com/u/8326978?v=4?s=100" width="100px;" alt="Kent Yao"/><br /><sub><b>Kent Yao</b></sub></a><br /><a href="#instructions-yaooqinn" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.devprodlogs.com/"><img src="https://avatars.githubusercontent.com/u/51440732?v=4?s=100" width="100px;" alt="Daniel Meppiel"/><br /><sub><b>Daniel Meppiel</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/burkeholland"><img src="https://avatars.githubusercontent.com/u/686963?v=4?s=100" width="100px;" alt="Burke Holland"/><br /><sub><b>Burke Holland</b></sub></a><br /><a href="#agents-burkeholland" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#infra-burkeholland" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#instructions-burkeholland" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-burkeholland" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://yaooqinn.github.io/"><img src="https://avatars.githubusercontent.com/u/8326978?v=4?s=100" width="100px;" alt="Kent Yao"/><br /><sub><b>Kent Yao</b></sub></a><br /><a href="#instructions-yaooqinn" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-yaooqinn" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.devprodlogs.com/"><img src="https://avatars.githubusercontent.com/u/51440732?v=4?s=100" width="100px;" alt="Daniel Meppiel"/><br /><sub><b>Daniel Meppiel</b></sub></a><br /><a href="#prompts-danielmeppiel" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yeelam-gordon"><img src="https://avatars.githubusercontent.com/u/73506701?v=4?s=100" width="100px;" alt="Gordon Lam"/><br /><sub><b>Gordon Lam</b></sub></a><br /><a href="#instructions-yeelam-gordon" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.madskristensen.net/"><img src="https://avatars.githubusercontent.com/u/1258877?v=4?s=100" width="100px;" alt="Mads Kristensen"/><br /><sub><b>Mads Kristensen</b></sub></a><br /><a href="#instructions-madskristensen" title="Custom instructions for GitHub Copilot">🧭</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://ks6088ts.github.io/"><img src="https://avatars.githubusercontent.com/u/1254960?v=4?s=100" width="100px;" alt="Shinji Takenaka"/><br /><sub><b>Shinji Takenaka</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=ks6088ts" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/spectatora"><img src="https://avatars.githubusercontent.com/u/1385755?v=4?s=100" width="100px;" alt="spectatora"/><br /><sub><b>spectatora</b></sub></a><br /><a href="#agents-spectatora" title="Specialized agents for GitHub Copilot">🎭</a> <a href="https://github.com/github/awesome-copilot/commits?author=spectatora" title="Code">💻</a> <a href="#maintenance-spectatora" title="Maintenance">🚧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sinedied"><img src="https://avatars.githubusercontent.com/u/593151?v=4?s=100" width="100px;" alt="Yohan Lasorsa"/><br /><sub><b>Yohan Lasorsa</b></sub></a><br /><a href="#instructions-sinedied" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/VamshiVerma"><img src="https://avatars.githubusercontent.com/u/21999324?v=4?s=100" width="100px;" alt="Vamshi Verma"/><br /><sub><b>Vamshi Verma</b></sub></a><br /><a href="#instructions-VamshiVerma" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://montemagno.com/"><img src="https://avatars.githubusercontent.com/u/1676321?v=4?s=100" width="100px;" alt="James Montemagno"/><br /><sub><b>James Montemagno</b></sub></a><br /><a href="#agents-jamesmontemagno" title="Specialized agents for GitHub Copilot">🎭</a> <a href="https://github.com/github/awesome-copilot/commits?author=jamesmontemagno" title="Documentation">📖</a> <a href="#instructions-jamesmontemagno" title="Custom instructions for GitHub Copilot">🧭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sinedied"><img src="https://avatars.githubusercontent.com/u/593151?v=4?s=100" width="100px;" alt="Yohan Lasorsa"/><br /><sub><b>Yohan Lasorsa</b></sub></a><br /><a href="#instructions-sinedied" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-sinedied" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/VamshiVerma"><img src="https://avatars.githubusercontent.com/u/21999324?v=4?s=100" width="100px;" alt="Vamshi Verma"/><br /><sub><b>Vamshi Verma</b></sub></a><br /><a href="#instructions-VamshiVerma" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-VamshiVerma" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://montemagno.com/"><img src="https://avatars.githubusercontent.com/u/1676321?v=4?s=100" width="100px;" alt="James Montemagno"/><br /><sub><b>James Montemagno</b></sub></a><br /><a href="#agents-jamesmontemagno" title="Specialized agents for GitHub Copilot">🎭</a> <a href="https://github.com/github/awesome-copilot/commits?author=jamesmontemagno" title="Documentation">📖</a> <a href="#instructions-jamesmontemagno" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-jamesmontemagno" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/alefragnani"><img src="https://avatars.githubusercontent.com/u/3781424?v=4?s=100" width="100px;" alt="Alessandro Fragnani"/><br /><sub><b>Alessandro Fragnani</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=alefragnani" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/ambilykk/"><img src="https://avatars.githubusercontent.com/u/10282550?v=4?s=100" width="100px;" alt="Ambily"/><br /><sub><b>Ambily</b></sub></a><br /><a href="#agents-ambilykk" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-ambilykk" title="Custom instructions for GitHub Copilot">🧭</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/krushideep"><img src="https://avatars.githubusercontent.com/u/174652083?v=4?s=100" width="100px;" alt="krushideep"/><br /><sub><b>krushideep</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/krushideep"><img src="https://avatars.githubusercontent.com/u/174652083?v=4?s=100" width="100px;" alt="krushideep"/><br /><sub><b>krushideep</b></sub></a><br /><a href="#prompts-krushideep" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mihsoft"><img src="https://avatars.githubusercontent.com/u/53946345?v=4?s=100" width="100px;" alt="devopsfan"/><br /><sub><b>devopsfan</b></sub></a><br /><a href="#agents-mihsoft" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://tgrall.github.io/"><img src="https://avatars.githubusercontent.com/u/541250?v=4?s=100" width="100px;" alt="Tugdual Grall"/><br /><sub><b>Tugdual Grall</b></sub></a><br /><a href="#instructions-tgrall" title="Custom instructions for GitHub Copilot">🧭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://tgrall.github.io/"><img src="https://avatars.githubusercontent.com/u/541250?v=4?s=100" width="100px;" alt="Tugdual Grall"/><br /><sub><b>Tugdual Grall</b></sub></a><br /><a href="#instructions-tgrall" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-tgrall" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.promptboost.dev/"><img src="https://avatars.githubusercontent.com/u/5461862?v=4?s=100" width="100px;" alt="Oren Me"/><br /><sub><b>Oren Me</b></sub></a><br /><a href="#agents-OrenMe" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-OrenMe" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mjrousos"><img src="https://avatars.githubusercontent.com/u/10077254?v=4?s=100" width="100px;" alt="Mike Rousos"/><br /><sub><b>Mike Rousos</b></sub></a><br /><a href="#instructions-mjrousos" title="Custom instructions for GitHub Copilot">🧭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mjrousos"><img src="https://avatars.githubusercontent.com/u/10077254?v=4?s=100" width="100px;" alt="Mike Rousos"/><br /><sub><b>Mike Rousos</b></sub></a><br /><a href="#instructions-mjrousos" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-mjrousos" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://devkimchi.com/"><img src="https://avatars.githubusercontent.com/u/1538528?v=4?s=100" width="100px;" alt="Justin Yoo"/><br /><sub><b>Justin Yoo</b></sub></a><br /><a href="#instructions-justinyoo" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/guiopen"><img src="https://avatars.githubusercontent.com/u/94094527?v=4?s=100" width="100px;" alt="Guilherme do Amaral Alves "/><br /><sub><b>Guilherme do Amaral Alves </b></sub></a><br /><a href="#instructions-guiopen" title="Custom instructions for GitHub Copilot">🧭</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/griffinashe/"><img src="https://avatars.githubusercontent.com/u/6391612?v=4?s=100" width="100px;" alt="Griffin Ashe"/><br /><sub><b>Griffin Ashe</b></sub></a><br /><a href="#agents-griffinashe" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#plugins-griffinashe" title="Curated plugins for GitHub Copilot">🎁</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/anchildress1"><img src="https://avatars.githubusercontent.com/u/6563688?v=4?s=100" width="100px;" alt="Ashley Childress"/><br /><sub><b>Ashley Childress</b></sub></a><br /><a href="#agents-anchildress1" title="Specialized agents for GitHub Copilot">🎭</a> <a href="https://github.com/github/awesome-copilot/commits?author=anchildress1" title="Documentation">📖</a> <a href="#instructions-anchildress1" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#infra-anchildress1" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/github/awesome-copilot/commits?author=anchildress1" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.senseof.tech/"><img src="https://avatars.githubusercontent.com/u/50712277?v=4?s=100" width="100px;" alt="Adrien Clerbois"/><br /><sub><b>Adrien Clerbois</b></sub></a><br /><a href="#agents-AClerbois" title="Specialized agents for GitHub Copilot">🎭</a> <a href="https://github.com/github/awesome-copilot/commits?author=AClerbois" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.senseof.tech/"><img src="https://avatars.githubusercontent.com/u/50712277?v=4?s=100" width="100px;" alt="Adrien Clerbois"/><br /><sub><b>Adrien Clerbois</b></sub></a><br /><a href="#agents-AClerbois" title="Specialized agents for GitHub Copilot">🎭</a> <a href="https://github.com/github/awesome-copilot/commits?author=AClerbois" title="Documentation">📖</a> <a href="#prompts-AClerbois" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Vhivi"><img src="https://avatars.githubusercontent.com/u/38220028?v=4?s=100" width="100px;" alt="ANGELELLI David"/><br /><sub><b>ANGELELLI David</b></sub></a><br /><a href="#agents-Vhivi" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://markdav.is/"><img src="https://avatars.githubusercontent.com/u/311063?v=4?s=100" width="100px;" alt="Mark Davis"/><br /><sub><b>Mark Davis</b></sub></a><br /><a href="#instructions-markdav-is" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MattVevang"><img src="https://avatars.githubusercontent.com/u/20714898?v=4?s=100" width="100px;" alt="Matt Vevang"/><br /><sub><b>Matt Vevang</b></sub></a><br /><a href="#instructions-MattVevang" title="Custom instructions for GitHub Copilot">🧭</a></td>
@@ -220,12 +116,12 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nullchimp"><img src="https://avatars.githubusercontent.com/u/58362593?v=4?s=100" width="100px;" alt="NULLchimp"/><br /><sub><b>NULLchimp</b></sub></a><br /><a href="#agents-nullchimp" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pkarda"><img src="https://avatars.githubusercontent.com/u/12649718?v=4?s=100" width="100px;" alt="Peter Karda"/><br /><sub><b>Peter Karda</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sdolgin"><img src="https://avatars.githubusercontent.com/u/576449?v=4?s=100" width="100px;" alt="Saul Dolgin"/><br /><sub><b>Saul Dolgin</b></sub></a><br /><a href="#agents-sdolgin" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-sdolgin" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/shubham070"><img src="https://avatars.githubusercontent.com/u/5480589?v=4?s=100" width="100px;" alt="Shubham Gaikwad"/><br /><sub><b>Shubham Gaikwad</b></sub></a><br /><a href="#agents-shubham070" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-shubham070" title="Custom instructions for GitHub Copilot">🧭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pkarda"><img src="https://avatars.githubusercontent.com/u/12649718?v=4?s=100" width="100px;" alt="Peter Karda"/><br /><sub><b>Peter Karda</b></sub></a><br /><a href="#prompts-pkarda" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sdolgin"><img src="https://avatars.githubusercontent.com/u/576449?v=4?s=100" width="100px;" alt="Saul Dolgin"/><br /><sub><b>Saul Dolgin</b></sub></a><br /><a href="#agents-sdolgin" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-sdolgin" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-sdolgin" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/shubham070"><img src="https://avatars.githubusercontent.com/u/5480589?v=4?s=100" width="100px;" alt="Shubham Gaikwad"/><br /><sub><b>Shubham Gaikwad</b></sub></a><br /><a href="#agents-shubham070" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-shubham070" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-shubham070" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/TheovanKraay"><img src="https://avatars.githubusercontent.com/u/24420698?v=4?s=100" width="100px;" alt="Theo van Kraay"/><br /><sub><b>Theo van Kraay</b></sub></a><br /><a href="#instructions-TheovanKraay" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/TianqiZhang"><img src="https://avatars.githubusercontent.com/u/5326582?v=4?s=100" width="100px;" alt="Tianqi Zhang"/><br /><sub><b>Tianqi Zhang</b></sub></a><br /><a href="#agents-TianqiZhang" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://blog.miniasp.com/"><img src="https://avatars.githubusercontent.com/u/88981?v=4?s=100" width="100px;" alt="Will 保哥"/><br /><sub><b>Will 保哥</b></sub></a><br /><a href="#agents-doggy8088" title="Specialized agents for GitHub Copilot">🎭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://blog.miniasp.com/"><img src="https://avatars.githubusercontent.com/u/88981?v=4?s=100" width="100px;" alt="Will 保哥"/><br /><sub><b>Will 保哥</b></sub></a><br /><a href="#agents-doggy8088" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#prompts-doggy8088" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://tsubalog.hatenablog.com/"><img src="https://avatars.githubusercontent.com/u/1592808?v=4?s=100" width="100px;" alt="Yuta Matsumura"/><br /><sub><b>Yuta Matsumura</b></sub></a><br /><a href="#instructions-tsubakimoto" title="Custom instructions for GitHub Copilot">🧭</a></td>
@@ -247,11 +143,11 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.codewithdan.com/"><img src="https://avatars.githubusercontent.com/u/1767249?v=4?s=100" width="100px;" alt="Dan Wahlin"/><br /><sub><b>Dan Wahlin</b></sub></a><br /><a href="#agents-DanWahlin" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://debbie.codes/"><img src="https://avatars.githubusercontent.com/u/13063165?v=4?s=100" width="100px;" alt="Debbie O'Brien"/><br /><sub><b>Debbie O'Brien</b></sub></a><br /><a href="#agents-debs-obrien" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-debs-obrien" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/echarrod"><img src="https://avatars.githubusercontent.com/u/1381991?v=4?s=100" width="100px;" alt="Ed Harrod"/><br /><sub><b>Ed Harrod</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://learn.microsoft.com/dotnet"><img src="https://avatars.githubusercontent.com/u/24882762?v=4?s=100" width="100px;" alt="Genevieve Warren"/><br /><sub><b>Genevieve Warren</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/guigui42"><img src="https://avatars.githubusercontent.com/u/2376010?v=4?s=100" width="100px;" alt="Guillaume"/><br /><sub><b>Guillaume</b></sub></a><br /><a href="#agents-guigui42" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/riqueufmg"><img src="https://avatars.githubusercontent.com/u/108551585?v=4?s=100" width="100px;" alt="Henrique Nunes"/><br /><sub><b>Henrique Nunes</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://debbie.codes/"><img src="https://avatars.githubusercontent.com/u/13063165?v=4?s=100" width="100px;" alt="Debbie O'Brien"/><br /><sub><b>Debbie O'Brien</b></sub></a><br /><a href="#agents-debs-obrien" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-debs-obrien" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-debs-obrien" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/echarrod"><img src="https://avatars.githubusercontent.com/u/1381991?v=4?s=100" width="100px;" alt="Ed Harrod"/><br /><sub><b>Ed Harrod</b></sub></a><br /><a href="#prompts-echarrod" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://learn.microsoft.com/dotnet"><img src="https://avatars.githubusercontent.com/u/24882762?v=4?s=100" width="100px;" alt="Genevieve Warren"/><br /><sub><b>Genevieve Warren</b></sub></a><br /><a href="#prompts-gewarren" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/guigui42"><img src="https://avatars.githubusercontent.com/u/2376010?v=4?s=100" width="100px;" alt="Guillaume"/><br /><sub><b>Guillaume</b></sub></a><br /><a href="#agents-guigui42" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#prompts-guigui42" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/riqueufmg"><img src="https://avatars.githubusercontent.com/u/108551585?v=4?s=100" width="100px;" alt="Henrique Nunes"/><br /><sub><b>Henrique Nunes</b></sub></a><br /><a href="#prompts-riqueufmg" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jeremiah-snee-openx"><img src="https://avatars.githubusercontent.com/u/113928685?v=4?s=100" width="100px;" alt="Jeremiah Snee"/><br /><sub><b>Jeremiah Snee</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=jeremiah-snee-openx" title="Code">💻</a></td>
     </tr>
     <tr>
@@ -269,7 +165,7 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="https://salih.guru/"><img src="https://avatars.githubusercontent.com/u/76786120?v=4?s=100" width="100px;" alt="Salih"/><br /><sub><b>Salih</b></sub></a><br /><a href="#instructions-salihguru" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://graef.io/"><img src="https://avatars.githubusercontent.com/u/19261257?v=4?s=100" width="100px;" alt="Sebastian Gräf"/><br /><sub><b>Sebastian Gräf</b></sub></a><br /><a href="#agents-segraef" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-segraef" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SebastienDegodez"><img src="https://avatars.githubusercontent.com/u/2349146?v=4?s=100" width="100px;" alt="Sebastien DEGODEZ"/><br /><sub><b>Sebastien DEGODEZ</b></sub></a><br /><a href="#instructions-SebastienDegodez" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sesmyrnov"><img src="https://avatars.githubusercontent.com/u/59627981?v=4?s=100" width="100px;" alt="Sergiy Smyrnov"/><br /><sub><b>Sergiy Smyrnov</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sesmyrnov"><img src="https://avatars.githubusercontent.com/u/59627981?v=4?s=100" width="100px;" alt="Sergiy Smyrnov"/><br /><sub><b>Sergiy Smyrnov</b></sub></a><br /><a href="#prompts-sesmyrnov" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SomeSolutionsArchitect"><img src="https://avatars.githubusercontent.com/u/139817767?v=4?s=100" width="100px;" alt="SomeSolutionsArchitect"/><br /><sub><b>SomeSolutionsArchitect</b></sub></a><br /><a href="#agents-SomeSolutionsArchitect" title="Specialized agents for GitHub Copilot">🎭</a></td>
     </tr>
     <tr>
@@ -277,9 +173,9 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/STRUDSO"><img src="https://avatars.githubusercontent.com/u/1543732?v=4?s=100" width="100px;" alt="Søren Trudsø Mahon"/><br /><sub><b>Søren Trudsø Mahon</b></sub></a><br /><a href="#instructions-STRUDSO" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://enakdesign.com/"><img src="https://avatars.githubusercontent.com/u/14024037?v=4?s=100" width="100px;" alt="Tj Vita"/><br /><sub><b>Tj Vita</b></sub></a><br /><a href="#agents-semperteneo" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pelikhan"><img src="https://avatars.githubusercontent.com/u/4175913?v=4?s=100" width="100px;" alt="Peli de Halleux"/><br /><sub><b>Peli de Halleux</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=pelikhan" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.paulomorgado.net/"><img src="https://avatars.githubusercontent.com/u/470455?v=4?s=100" width="100px;" alt="Paulo Morgado"/><br /><sub><b>Paulo Morgado</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.paulomorgado.net/"><img src="https://avatars.githubusercontent.com/u/470455?v=4?s=100" width="100px;" alt="Paulo Morgado"/><br /><sub><b>Paulo Morgado</b></sub></a><br /><a href="#prompts-paulomorgado" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://paul.crane.net.nz/"><img src="https://avatars.githubusercontent.com/u/808676?v=4?s=100" width="100px;" alt="Paul Crane"/><br /><sub><b>Paul Crane</b></sub></a><br /><a href="#agents-pcrane" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.pamelafox.org/"><img src="https://avatars.githubusercontent.com/u/297042?v=4?s=100" width="100px;" alt="Pamela Fox"/><br /><sub><b>Pamela Fox</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.pamelafox.org/"><img src="https://avatars.githubusercontent.com/u/297042?v=4?s=100" width="100px;" alt="Pamela Fox"/><br /><sub><b>Pamela Fox</b></sub></a><br /><a href="#prompts-pamelafox" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://oskarthornblad.se/"><img src="https://avatars.githubusercontent.com/u/640102?v=4?s=100" width="100px;" alt="Oskar Thornblad"/><br /><sub><b>Oskar Thornblad</b></sub></a><br /><a href="#instructions-prewk" title="Custom instructions for GitHub Copilot">🧭</a></td>
@@ -293,10 +189,10 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/matebarabas"><img src="https://avatars.githubusercontent.com/u/22733424?v=4?s=100" width="100px;" alt="Máté Barabás"/><br /><sub><b>Máté Barabás</b></sub></a><br /><a href="#instructions-matebarabas" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikeparker104"><img src="https://avatars.githubusercontent.com/u/12763221?v=4?s=100" width="100px;" alt="Mike Parker"/><br /><sub><b>Mike Parker</b></sub></a><br /><a href="#instructions-mikeparker104" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikekistler"><img src="https://avatars.githubusercontent.com/u/85643503?v=4?s=100" width="100px;" alt="Mike Kistler"/><br /><sub><b>Mike Kistler</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikekistler"><img src="https://avatars.githubusercontent.com/u/85643503?v=4?s=100" width="100px;" alt="Mike Kistler"/><br /><sub><b>Mike Kistler</b></sub></a><br /><a href="#prompts-mikekistler" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/giomartinsdev"><img src="https://avatars.githubusercontent.com/u/125399281?v=4?s=100" width="100px;" alt="Giovanni de Almeida Martins"/><br /><sub><b>Giovanni de Almeida Martins</b></sub></a><br /><a href="#instructions-giomartinsdev" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dgh06175"><img src="https://avatars.githubusercontent.com/u/77305722?v=4?s=100" width="100px;" alt="이상현"/><br /><sub><b>이상현</b></sub></a><br /><a href="#instructions-dgh06175" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/zooav"><img src="https://avatars.githubusercontent.com/u/12625412?v=4?s=100" width="100px;" alt="Ankur Sharma"/><br /><sub><b>Ankur Sharma</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/zooav"><img src="https://avatars.githubusercontent.com/u/12625412?v=4?s=100" width="100px;" alt="Ankur Sharma"/><br /><sub><b>Ankur Sharma</b></sub></a><br /><a href="#prompts-zooav" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/webreidi"><img src="https://avatars.githubusercontent.com/u/55603905?v=4?s=100" width="100px;" alt="Wendy Breiding"/><br /><sub><b>Wendy Breiding</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=webreidi" title="Code">💻</a></td>
     </tr>
     <tr>
@@ -304,7 +200,7 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="https://about.me/shane-lee"><img src="https://avatars.githubusercontent.com/u/5466825?v=4?s=100" width="100px;" alt="shane lee"/><br /><sub><b>shane lee</b></sub></a><br /><a href="#instructions-shavo007" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sdanzo-hrb"><img src="https://avatars.githubusercontent.com/u/136493100?v=4?s=100" width="100px;" alt="sdanzo-hrb"/><br /><sub><b>sdanzo-hrb</b></sub></a><br /><a href="#agents-sdanzo-hrb" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nativebpm"><img src="https://avatars.githubusercontent.com/u/33398121?v=4?s=100" width="100px;" alt="sauran"/><br /><sub><b>sauran</b></sub></a><br /><a href="#instructions-isauran" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/samqbush"><img src="https://avatars.githubusercontent.com/u/74389839?v=4?s=100" width="100px;" alt="samqbush"/><br /><sub><b>samqbush</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/samqbush"><img src="https://avatars.githubusercontent.com/u/74389839?v=4?s=100" width="100px;" alt="samqbush"/><br /><sub><b>samqbush</b></sub></a><br /><a href="#prompts-samqbush" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pareenaverma"><img src="https://avatars.githubusercontent.com/u/59843121?v=4?s=100" width="100px;" alt="pareenaverma"/><br /><sub><b>pareenaverma</b></sub></a><br /><a href="#agents-pareenaverma" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/oleksiyyurchyna"><img src="https://avatars.githubusercontent.com/u/10256765?v=4?s=100" width="100px;" alt="oleksiyyurchyna"/><br /><sub><b>oleksiyyurchyna</b></sub></a><br /><a href="#plugins-oleksiyyurchyna" title="Curated plugins for GitHub Copilot">🎁</a> <a href="#prompts-oleksiyyurchyna" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
@@ -315,7 +211,7 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/factory-davidgu"><img src="https://avatars.githubusercontent.com/u/229352262?v=4?s=100" width="100px;" alt="factory-davidgu"/><br /><sub><b>factory-davidgu</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=factory-davidgu" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dangelov-qa"><img src="https://avatars.githubusercontent.com/u/92313553?v=4?s=100" width="100px;" alt="dangelov-qa"/><br /><sub><b>dangelov-qa</b></sub></a><br /><a href="#agents-dangelov-qa" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/BenoitMaucotel"><img src="https://avatars.githubusercontent.com/u/54392431?v=4?s=100" width="100px;" alt="BenoitMaucotel"/><br /><sub><b>BenoitMaucotel</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=BenoitMaucotel" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/benjisho-aidome"><img src="https://avatars.githubusercontent.com/u/218995725?v=4?s=100" width="100px;" alt="benjisho-aidome"/><br /><sub><b>benjisho-aidome</b></sub></a><br /><a href="#agents-benjisho-aidome" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-benjisho-aidome" title="Custom instructions for GitHub Copilot">🧭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/benjisho-aidome"><img src="https://avatars.githubusercontent.com/u/218995725?v=4?s=100" width="100px;" alt="benjisho-aidome"/><br /><sub><b>benjisho-aidome</b></sub></a><br /><a href="#agents-benjisho-aidome" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#instructions-benjisho-aidome" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-benjisho-aidome" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yukiomoto"><img src="https://avatars.githubusercontent.com/u/38450410?v=4?s=100" width="100px;" alt="Yuki Omoto"/><br /><sub><b>Yuki Omoto</b></sub></a><br /><a href="#instructions-yukiomoto" title="Custom instructions for GitHub Copilot">🧭</a></td>
@@ -328,26 +224,26 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://tinyurl.com/3p5j9mwe"><img src="https://avatars.githubusercontent.com/u/9591887?v=4?s=100" width="100px;" alt="Udaya Veeramreddygari"/><br /><sub><b>Udaya Veeramreddygari</b></sub></a><br /><a href="#instructions-udayakumarreddyv" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/iletai"><img src="https://avatars.githubusercontent.com/u/26614687?v=4?s=100" width="100px;" alt="Tài Lê"/><br /><sub><b>Tài Lê</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/iletai"><img src="https://avatars.githubusercontent.com/u/26614687?v=4?s=100" width="100px;" alt="Tài Lê"/><br /><sub><b>Tài Lê</b></sub></a><br /><a href="#prompts-iletai" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://tsubasaogawa.me/"><img src="https://avatars.githubusercontent.com/u/7788821?v=4?s=100" width="100px;" alt="Tsubasa Ogawa"/><br /><sub><b>Tsubasa Ogawa</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=tsubasaogawa" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://glsauto.com/"><img src="https://avatars.githubusercontent.com/u/132710946?v=4?s=100" width="100px;" alt="Troy Witthoeft (glsauto)"/><br /><sub><b>Troy Witthoeft (glsauto)</b></sub></a><br /><a href="#instructions-twitthoeft-gls" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://jfversluis.dev/"><img src="https://avatars.githubusercontent.com/u/939291?v=4?s=100" width="100px;" alt="Gerald Versluis"/><br /><sub><b>Gerald Versluis</b></sub></a><br /><a href="#instructions-jfversluis" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/geoder101"><img src="https://avatars.githubusercontent.com/u/145904?v=4?s=100" width="100px;" alt="George Dernikos"/><br /><sub><b>George Dernikos</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/geoder101"><img src="https://avatars.githubusercontent.com/u/145904?v=4?s=100" width="100px;" alt="George Dernikos"/><br /><sub><b>George Dernikos</b></sub></a><br /><a href="#prompts-geoder101" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gautambaghel"><img src="https://avatars.githubusercontent.com/u/22324290?v=4?s=100" width="100px;" alt="Gautam"/><br /><sub><b>Gautam</b></sub></a><br /><a href="#agents-gautambaghel" title="Specialized agents for GitHub Copilot">🎭</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/feapaydin"><img src="https://avatars.githubusercontent.com/u/19946639?v=4?s=100" width="100px;" alt="Furkan Enes"/><br /><sub><b>Furkan Enes</b></sub></a><br /><a href="#instructions-feapaydin" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/fmuecke"><img src="https://avatars.githubusercontent.com/u/7921024?v=4?s=100" width="100px;" alt="Florian Mücke"/><br /><sub><b>Florian Mücke</b></sub></a><br /><a href="#agents-fmuecke" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.felixarjuna.dev/"><img src="https://avatars.githubusercontent.com/u/79026094?v=4?s=100" width="100px;" alt="Felix Arjuna"/><br /><sub><b>Felix Arjuna</b></sub></a><br /><a href="#instructions-felixarjuna" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ewega"><img src="https://avatars.githubusercontent.com/u/26189114?v=4?s=100" width="100px;" alt="Eldrick Wega"/><br /><sub><b>Eldrick Wega</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/danchev"><img src="https://avatars.githubusercontent.com/u/12420863?v=4?s=100" width="100px;" alt="Dobri Danchev"/><br /><sub><b>Dobri Danchev</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://dgamboa.com/"><img src="https://avatars.githubusercontent.com/u/7052267?v=4?s=100" width="100px;" alt="Diego Gamboa"/><br /><sub><b>Diego Gamboa</b></sub></a><br /></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/derekclair"><img src="https://avatars.githubusercontent.com/u/5247629?v=4?s=100" width="100px;" alt="Derek Clair"/><br /><sub><b>Derek Clair</b></sub></a><br /><a href="#agents-derekclair" title="Specialized agents for GitHub Copilot">🎭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ewega"><img src="https://avatars.githubusercontent.com/u/26189114?v=4?s=100" width="100px;" alt="Eldrick Wega"/><br /><sub><b>Eldrick Wega</b></sub></a><br /><a href="#prompts-ewega" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/danchev"><img src="https://avatars.githubusercontent.com/u/12420863?v=4?s=100" width="100px;" alt="Dobri Danchev"/><br /><sub><b>Dobri Danchev</b></sub></a><br /><a href="#prompts-danchev" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://dgamboa.com/"><img src="https://avatars.githubusercontent.com/u/7052267?v=4?s=100" width="100px;" alt="Diego Gamboa"/><br /><sub><b>Diego Gamboa</b></sub></a><br /><a href="#prompts-difegam" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/derekclair"><img src="https://avatars.githubusercontent.com/u/5247629?v=4?s=100" width="100px;" alt="Derek Clair"/><br /><sub><b>Derek Clair</b></sub></a><br /><a href="#agents-derekclair" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#prompts-derekclair" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://dev.to/davidortinau"><img src="https://avatars.githubusercontent.com/u/41873?v=4?s=100" width="100px;" alt="David Ortinau"/><br /><sub><b>David Ortinau</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=davidortinau" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/danielabbatt"><img src="https://avatars.githubusercontent.com/u/8926756?v=4?s=100" width="100px;" alt="Daniel Abbatt"/><br /><sub><b>Daniel Abbatt</b></sub></a><br /><a href="#instructions-danielabbatt" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/CypherHK"><img src="https://avatars.githubusercontent.com/u/230935834?v=4?s=100" width="100px;" alt="CypherHK"/><br /><sub><b>CypherHK</b></sub></a><br /><a href="#agents-CypherHK" title="Specialized agents for GitHub Copilot">🎭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/CypherHK"><img src="https://avatars.githubusercontent.com/u/230935834?v=4?s=100" width="100px;" alt="CypherHK"/><br /><sub><b>CypherHK</b></sub></a><br /><a href="#agents-CypherHK" title="Specialized agents for GitHub Copilot">🎭</a> <a href="#prompts-CypherHK" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/craigbekker"><img src="https://avatars.githubusercontent.com/u/1115912?v=4?s=100" width="100px;" alt="Craig Bekker"/><br /><sub><b>Craig Bekker</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=craigbekker" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.peug.net/"><img src="https://avatars.githubusercontent.com/u/3845786?v=4?s=100" width="100px;" alt="Christophe Peugnet"/><br /><sub><b>Christophe Peugnet</b></sub></a><br /><a href="#instructions-tossnet" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lechnerc77"><img src="https://avatars.githubusercontent.com/u/22294087?v=4?s=100" width="100px;" alt="Christian Lechner"/><br /><sub><b>Christian Lechner</b></sub></a><br /><a href="#instructions-lechnerc77" title="Custom instructions for GitHub Copilot">🧭</a></td>
@@ -355,7 +251,7 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/artemsaveliev"><img src="https://avatars.githubusercontent.com/u/15679218?v=4?s=100" width="100px;" alt="Artem Saveliev"/><br /><sub><b>Artem Saveliev</b></sub></a><br /><a href="#instructions-artemsaveliev" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://javaetmoi.com/"><img src="https://avatars.githubusercontent.com/u/838318?v=4?s=100" width="100px;" alt="Antoine Rey"/><br /><sub><b>Antoine Rey</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://javaetmoi.com/"><img src="https://avatars.githubusercontent.com/u/838318?v=4?s=100" width="100px;" alt="Antoine Rey"/><br /><sub><b>Antoine Rey</b></sub></a><br /><a href="#prompts-arey" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/PiKa919"><img src="https://avatars.githubusercontent.com/u/96786190?v=4?s=100" width="100px;" alt="Ankit Das"/><br /><sub><b>Ankit Das</b></sub></a><br /><a href="#instructions-PiKa919" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alineavila"><img src="https://avatars.githubusercontent.com/u/24813256?v=4?s=100" width="100px;" alt="Aline Ávila"/><br /><sub><b>Aline Ávila</b></sub></a><br /><a href="#instructions-alineavila" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/martin-cod"><img src="https://avatars.githubusercontent.com/u/33550246?v=4?s=100" width="100px;" alt="Alexander Martinkevich"/><br /><sub><b>Alexander Martinkevich</b></sub></a><br /><a href="#agents-martin-cod" title="Specialized agents for GitHub Copilot">🎭</a></td>
@@ -369,7 +265,7 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/4regab"><img src="https://avatars.githubusercontent.com/u/178603515?v=4?s=100" width="100px;" alt="4regab"/><br /><sub><b>4regab</b></sub></a><br /><a href="#instructions-4regab" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MiguelElGallo"><img src="https://avatars.githubusercontent.com/u/60221874?v=4?s=100" width="100px;" alt="Miguel P Z"/><br /><sub><b>Miguel P Z</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=MiguelElGallo" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://a11ysupport.io/"><img src="https://avatars.githubusercontent.com/u/498678?v=4?s=100" width="100px;" alt="Michael Fairchild"/><br /><sub><b>Michael Fairchild</b></sub></a><br /><a href="#instructions-mfairchild365" title="Custom instructions for GitHub Copilot">🧭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/michael-volz/"><img src="https://avatars.githubusercontent.com/u/129928?v=4?s=100" width="100px;" alt="Michael A. Volz (Flynn)"/><br /><sub><b>Michael A. Volz (Flynn)</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/michael-volz/"><img src="https://avatars.githubusercontent.com/u/129928?v=4?s=100" width="100px;" alt="Michael A. Volz (Flynn)"/><br /><sub><b>Michael A. Volz (Flynn)</b></sub></a><br /><a href="#prompts-michaelvolz" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mike-Hanna"><img src="https://avatars.githubusercontent.com/u/50142889?v=4?s=100" width="100px;" alt="Michael"/><br /><sub><b>Michael</b></sub></a><br /><a href="#instructions-Mike-Hanna" title="Custom instructions for GitHub Copilot">🧭</a></td>
@@ -386,24 +282,24 @@ Thanks goes to these wonderful people ([emoji key](./CONTRIBUTING.md#contributor
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/whiteken"><img src="https://avatars.githubusercontent.com/u/20211937?v=4?s=100" width="100px;" alt="Kenny White"/><br /><sub><b>Kenny White</b></sub></a><br /><a href="#instructions-whiteken" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/KaloyanGenev"><img src="https://avatars.githubusercontent.com/u/42644424?v=4?s=100" width="100px;" alt="KaloyanGenev"/><br /><sub><b>KaloyanGenev</b></sub></a><br /><a href="#agents-KaloyanGenev" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ranrar"><img src="https://avatars.githubusercontent.com/u/95967772?v=4?s=100" width="100px;" alt="Kim Skov Rasmussen"/><br /><sub><b>Kim Skov Rasmussen</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=Ranrar" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.julien-dubois.com/"><img src="https://avatars.githubusercontent.com/u/316835?v=4?s=100" width="100px;" alt="Julien Dubois"/><br /><sub><b>Julien Dubois</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.julien-dubois.com/"><img src="https://avatars.githubusercontent.com/u/316835?v=4?s=100" width="100px;" alt="Julien Dubois"/><br /><sub><b>Julien Dubois</b></sub></a><br /><a href="#prompts-jdubois" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://digio.es/"><img src="https://avatars.githubusercontent.com/u/173672918?v=4?s=100" width="100px;" alt="José Antonio Garrido"/><br /><sub><b>José Antonio Garrido</b></sub></a><br /><a href="#instructions-josegarridodigio" title="Custom instructions for GitHub Copilot">🧭</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.sugbo4j.co.nz/"><img src="https://avatars.githubusercontent.com/u/15100839?v=4?s=100" width="100px;" alt="Joseph Gonzales"/><br /><sub><b>Joseph Gonzales</b></sub></a><br /><a href="#instructions-josephgonzales01" title="Custom instructions for GitHub Copilot">🧭</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.sugbo4j.co.nz/"><img src="https://avatars.githubusercontent.com/u/15100839?v=4?s=100" width="100px;" alt="Joseph Gonzales"/><br /><sub><b>Joseph Gonzales</b></sub></a><br /><a href="#instructions-josephgonzales01" title="Custom instructions for GitHub Copilot">🧭</a> <a href="#prompts-josephgonzales01" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yortch"><img src="https://avatars.githubusercontent.com/u/4576246?v=4?s=100" width="100px;" alt="Jorge Balderas"/><br /><sub><b>Jorge Balderas</b></sub></a><br /><a href="#instructions-yortch" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://johnpapa.net/"><img src="https://avatars.githubusercontent.com/u/1202528?v=4?s=100" width="100px;" alt="John Papa"/><br /><sub><b>John Papa</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=johnpapa" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.johnlokerse.dev/"><img src="https://avatars.githubusercontent.com/u/3514513?v=4?s=100" width="100px;" alt="John"/><br /><sub><b>John</b></sub></a><br /><a href="#agents-johnlokerse" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://joe-watkins.io/"><img src="https://avatars.githubusercontent.com/u/3695795?v=4?s=100" width="100px;" alt="Joe Watkins"/><br /><sub><b>Joe Watkins</b></sub></a><br /><a href="#instructions-joe-watkins" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://jan-v.nl/"><img src="https://avatars.githubusercontent.com/u/462356?v=4?s=100" width="100px;" alt="Jan de Vries"/><br /><sub><b>Jan de Vries</b></sub></a><br /><a href="#agents-Jandev" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nohwnd"><img src="https://avatars.githubusercontent.com/u/5735905?v=4?s=100" width="100px;" alt="Jakub Jareš"/><br /><sub><b>Jakub Jareš</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nohwnd"><img src="https://avatars.githubusercontent.com/u/5735905?v=4?s=100" width="100px;" alt="Jakub Jareš"/><br /><sub><b>Jakub Jareš</b></sub></a><br /><a href="#prompts-nohwnd" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jaxn"><img src="https://avatars.githubusercontent.com/u/29095?v=4?s=100" width="100px;" alt="Jackson Miller"/><br /><sub><b>Jackson Miller</b></sub></a><br /><a href="#instructions-jaxn" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ioana37"><img src="https://avatars.githubusercontent.com/u/69301842?v=4?s=100" width="100px;" alt="Ioana A"/><br /><sub><b>Ioana A</b></sub></a><br /><a href="#instructions-Ioana37" title="Custom instructions for GitHub Copilot">🧭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hunterhogan"><img src="https://avatars.githubusercontent.com/u/2958419?v=4?s=100" width="100px;" alt="Hunter Hogan"/><br /><sub><b>Hunter Hogan</b></sub></a><br /><a href="#agents-hunterhogan" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hashimwarren"><img src="https://avatars.githubusercontent.com/u/6027587?v=4?s=100" width="100px;" alt="Hashim Warren"/><br /><sub><b>Hashim Warren</b></sub></a><br /><a href="#agents-hashimwarren" title="Specialized agents for GitHub Copilot">🎭</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Arggon"><img src="https://avatars.githubusercontent.com/u/20962238?v=4?s=100" width="100px;" alt="Gonzalo"/><br /><sub><b>Gonzalo</b></sub></a><br /></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Arggon"><img src="https://avatars.githubusercontent.com/u/20962238?v=4?s=100" width="100px;" alt="Gonzalo"/><br /><sub><b>Gonzalo</b></sub></a><br /><a href="#prompts-Arggon" title="Reusable prompts for GitHub Copilot">⌨️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://hachyderm.io/@0gis0"><img src="https://avatars.githubusercontent.com/u/175379?v=4?s=100" width="100px;" alt="Gisela Torres"/><br /><sub><b>Gisela Torres</b></sub></a><br /><a href="#agents-0GiS0" title="Specialized agents for GitHub Copilot">🎭</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shibicr93"><img src="https://avatars.githubusercontent.com/u/6803434?v=4?s=100" width="100px;" alt="Shibi Ramachandran"/><br /><sub><b>Shibi Ramachandran</b></sub></a><br /><a href="https://github.com/github/awesome-copilot/commits?author=shibicr93" title="Code">💻</a></td>
     </tr>
